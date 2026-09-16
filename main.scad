@@ -1,11 +1,23 @@
-echo("Работа Полина Максимова");
-w_Frame = 65;
-d_Frame = 5;
-h_Frame = 40;
-fitnes_Frame = 4;
+use <frame.scad>
+use <akkum18650.scad>
 
-difference() {
-    cube([w_Frame, d_Frame, h_Frame], center = true);
-    color("red") 
-    cube([w_Frame - 2 * fitnes_Frame, d_Frame + 2, h_Frame - 2 * fitnes_Frame], center = true);
+d_akkum = 18;
+h_akkum = 65;
+
+gap_backlight = 1.5;
+thickness_bottom = 2;
+
+w_back = 70;
+h_back = 45;
+
+echo("Работа Имя Фамилия!");
+build_frame();
+
+module build_frame() {
+    translate([0, 0, h_back/2+2*gap_backlight])
+    rotate([90, 0, 0])
+    kit_frame();
+    translate([0, d_akkum/2+thickness_bottom, d_akkum/2])
+    rotate([0, 90, 0])
+    akkum18650();
 }
