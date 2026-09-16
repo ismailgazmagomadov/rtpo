@@ -20,6 +20,26 @@ module kit_frame() {
     // color("green")
     translate([0, 0, h_walls/2+thickness_bottom/2])
     walls();
+<<<<<<< HEAD
+=======
+}
+
+module walls() {
+    difference() {
+        cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, h_walls], center=true);
+        color("red")
+        cube([w_back+gap_backlight, h_back+gap_backlight, h_walls+1], center=true);
+    }
+}
+
+module bottom() {
+    cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, thickness_bottom], center=true);
+}
+
+module backlight() {
+    color("lightgreen")
+    cube([w_back, h_back, thickness_back], center=true);
+>>>>>>> 87e22226fb25d7d5548541a11d2931705626913e
 }
 
 module walls() {
