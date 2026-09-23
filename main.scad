@@ -18,6 +18,7 @@ module build_frame() {
     rotate([90, 0, 0])
     kit_frame();
     translate([0, d_akkum/2+thickness_bottom, d_akkum/2])
-    rotate([0, 90, 0])
-    akkum18650();
+    //rotate([0, 90, 0])
+    // akkum18650();
+    akkum1650_set()
 }
