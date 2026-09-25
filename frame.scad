@@ -1,60 +1,53 @@
-use <akkum18650.scad>
+use <akkum_18650.scad>
 
-echo("Работа Имя Фамилия!");
-
-d_akkum = 18;
-h_akkum = 65;
-
+echo("Работа Исмиала Газмагомадова!");
 thickness_frame = 4;
 thickness_walls = 2;
 thickness_bottom = 2;
 
-w_back =70;
+w_back = 70;
 h_back = 45;
 thickness_back = 1;
 h_walls = 4;
+
+d_akkum = 18;
+h_akkum = 65;
+
 gap_backlight = 1.5;
 
-module kit_frame() {
+kit_frame();
+
+module kit_frame(){
     bottom();
-    // color("green")
-    translate([0, 0, h_walls/2+thickness_bottom/2])
+    translate([0,0,h_walls/2+thickness_bottom/2])
     walls();
-<<<<<<< HEAD
-=======
+    wires();
 }
 
-module walls() {
-    difference() {
-        cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, h_walls], center=true);
+module wires() {
+    translate([w_back/2, -h_back/2+6, h_walls/2+0.5])
+    rotate([0, 90, 0])
+    color("red")
+    cylinder(d=d_wires, h=25, center=true, $fn=25);
+    
+    translate([w_back/2, -h_back/2+2, h_walls/2+0.5])
+    rotate([0, 90, 0])
+    color("black")
+    cylinder(d=d_wires, h=25, center=true, $fn=25);
+}
+
+module walls(){
+    difference(){
+        cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, h_walls], center = true);
         color("red")
-        cube([w_back+gap_backlight, h_back+gap_backlight, h_walls+1], center=true);
+        cube([w_back+gap_backlight, h_back+gap_backlight, h_walls+1], center = true);
     }
 }
-
-module bottom() {
-    cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, thickness_bottom], center=true);
-}
-
-module backlight() {
+module backlight(){
     color("lightgreen")
-    cube([w_back, h_back, thickness_back], center=true);
->>>>>>> 87e22226fb25d7d5548541a11d2931705626913e
+    cube([w_back, h_back, thickness_back], center = true);
 }
 
-module walls() {
-    difference() {
-        cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, h_walls], center=true);
-        color("red")
-        cube([w_back+gap_backlight, h_back+gap_backlight, h_walls+1], center=true);
-    }
-}
-
-module bottom() {
-    cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, thickness_bottom], center=true);
-}
-
-module backlight() {
-    color("lightgreen")
-    cube([w_back, h_back, thickness_back], center=true);
+module bottom(){
+    cube([w_back+2*thickness_walls+gap_backlight, h_back+2*thickness_walls+gap_backlight, thickness_bottom], center = true);
 }
