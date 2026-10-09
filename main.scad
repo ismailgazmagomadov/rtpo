@@ -1,7 +1,7 @@
 use <frame.scad>
 use <akkum_18650.scad>
 
-echo("Работа Исмиала Газмагомадова!");
+echo("Работа Асыловой Анастасии!");
 
 h_back = 45;
 d_akkum = 18;

@@ -1,13 +1,14 @@
-# Подсветка для рамки кадров рентгеносокопии
+# Подсветка для рамки кадров рентгеноскопии 
 
 ## Frame Backlight
 
-Model for 3D-pintining on language OpenScad.
+Model for 3D-printing of language OpenScad.
 Backlight powered from akkum 18650 LiIon.
-![commonMD](Build_Frame_OpenScad.PNG)
-![commonMD](1.PNG)
-![commonMD](2.PNG)
-![commonMD](3.PNG)
-# Hyperlinks 
 
-1. [OpemScad model golder for double akkum 18650] (https://www.thingiverse.com/thing:456900/files) on site thingiverse
+![commonMD](build_frame.png)
+![commonMD](build_frame_2akkum_openscad.png)
+![commonMD](build_frame_2akkum_openscad_wires.png)
+
+# Hyperlinks
+
+1. [OpenScad model holder of double akkum 18650](https://www.thingiverse.com/thing:456900) on site thingiverse
